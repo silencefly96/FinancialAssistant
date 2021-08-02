@@ -1,0 +1,22 @@
+{
+  "name": "financialassistant",
+  "version": "1.0.0",
+  "description": "订单管理、工资管理微信小程序",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silencefly96/FinancialAssistant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silencefly96/FinancialAssistant/issues"
+  },
+  "homepage": "https://github.com/silencefly96/FinancialAssistant#readme",
+  "dependencies": {
+    "vant-weapp": "^0.5.29"
+  }
+}

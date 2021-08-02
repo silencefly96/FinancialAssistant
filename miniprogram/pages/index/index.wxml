@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!-- 页面容器 -->
+<cover-view wx:if="{{!isStatusBar}}" class="topHeight" style="height:{{topHeight}}rpx;">
+    <cover-view class="center-both" style="margin-top:{{statusHeight}}rpx;height: {{naviHeight}}rpx">
+        <cover-view>
+            {{title}}
+        </cover-view>
+    </cover-view>
+</cover-view>
+
+<view class="page-container" style="height:{{containerHeight}}rpx">
+    <!-- 使用wx:if 不会渲染，每次点击会重走组件生命周期 -->
+    <!-- 使用display:none隐藏，仍然会渲染组件，只走一遍生命周期 -->
+    <!-- 使用hidden隐藏，和display:none一样，但是受限于块级元素，无法使用 -->
+
+    <!-- 老板 -->
+    <block wx:if="{{roleType=='assessor'}}">
+        <boss_home id="id0" style="display: {{currentPageIndex==0?'block':'none'}};" />
+        <boss_project id="id1" indexpage="{{true}}" style="display: {{currentPageIndex==1?'block':'none'}};" />
+        <boss_statistics id="id2" show='{{currentPageIndex==2}}'
+            style="display: {{currentPageIndex==2?'block':'none'}};" />
+        <boss_mine id="id3" style="display: {{currentPageIndex==3?'block':'none'}};" />
+    </block>
+
+    <!-- 员工 -->
+    <block wx:elif="{{roleType=='agency'}}">
+        <worker_home id="id0" style="display: {{currentPageIndex==0?'block':'none'}};" />
+        <worker_project id="id1" indexpage="{{true}}" style="display: {{currentPageIndex==1?'block':'none'}};" />
+        <worker_mine id="id2" style="display: {{currentPageIndex==2?'block':'none'}};" />
+    </block>
+</view>
+
+<!-- 底部切换菜单 -->
+<view class="row-center tab-container" style="height:{{104 + bottomHeight}}rpx;padding-bottom:{{bottomHeight}}rpx">
+    <view wx:for="{{tabBar}}" wx:key="index" class="flex1 center-both col"
+        style="color:{{index==currentPageIndex?'#0B7BFB':'#616161FF'}}" data-index="{{index}}" bindtap="onSelectTap">
+        <view class="{{item.iconClass}} icon"></view>
+        <view class="text">{{item.text}}</view>
+    </view>
+</view>

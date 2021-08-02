@@ -1,0 +1,15 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "数字消防安全评估",
+  "usingComponents": {
+    "boss_home": "../common/sample/sample",
+    "boss_project": "../common/sample/sample",
+    "boss_statistics": "../common/sample/sample",
+    "boss_mine": "../common/sample/sample",
+
+    "woker_home": "../common/sample/sample",
+    "woker_project": "../common/sample/sample",
+    "woker_mine": "../common/sample/sample"
+  },
+  "enablePullDownRefresh": true
+}

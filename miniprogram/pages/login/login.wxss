@@ -1,0 +1,155 @@
+/* pages/login/login.wxss */
+.logo {
+    margin-top: 64rpx;
+    margin-bottom: 32rpx;
+
+    font-size: 128rpx;
+    color: #FFAA00FF;
+}
+
+.title {
+    font-size: 36rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #2E2E2E;
+    line-height: 50rpx;
+}
+
+.login-type-container {
+    margin-top: 64rpx;
+}
+
+.login-type-text {
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    line-height: 44rpx;
+}
+
+.underline {
+    width: 40rpx;
+    height: 2rpx;
+    background: #0B7BFB;
+    border-radius: 2rpx;
+
+    margin-top: 8rpx;
+}
+
+.input-container {
+    width: auto;
+    position: relative;
+    margin: 0 80rpx;
+    margin-top: 64rpx;
+}
+
+.input {
+    height: 104rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    line-height: 44rpx;
+    border: 0rpx;
+}
+
+.input-button-container{
+    height: 106rpx;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2rpx solid #E5E5E5;
+}
+
+.code-button {
+    height: 56rpx;
+    width: 168rpx;
+    border-radius: 28rpx;
+    background: white;
+    border: 2rpx solid #E5E5E5;
+
+    text-align: center;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #616161;
+    line-height: 56rpx;
+}
+
+
+.user-list-container {
+    height: 0;
+    width: 100%;
+
+    position: absolute;
+    top: 104rpx;
+
+    border: 2rpx solid #efefef;
+    border-top: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: #fff;
+    z-index: 100;
+
+    transition: height 0.3s;
+}
+
+.list-item {
+    height: 80rpx;
+    border-bottom: 2rpx solid #efefef;
+    padding: 10rpx 40rpx;
+    box-sizing: border-box;
+
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #949494;
+    line-height: 40rpx;
+}
+
+.login-button {
+    margin: 0 80rpx;
+    box-sizing: border-box;
+    height: 96rpx;
+    line-height: 96rpx;
+    color: white;
+    border-radius: 48rpx;
+    margin-top: 64rpx;
+}
+
+.login-button::after {
+    border-radius: 48rpx;
+    border: 0;
+}
+
+.option-container {
+    margin: 24rpx 120rpx;
+
+    font-size:28rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #616161;
+    line-height: 40rpx;
+}
+
+.wechat-hint {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #949494;
+    line-height: 40rpx;
+    text-align: center;
+
+    margin-top: 80rpx;
+}
+
+.wechat-container {
+    margin-top: 64rpx;
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 48rpx;
+    box-sizing: border-box;
+    border: 2rpx solid #E5E5E5;
+}
+
+.wechat {
+    font-size: 48rpx;
+    color: #50B674FF;
+}

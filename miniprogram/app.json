@@ -1,0 +1,16 @@
+{
+  "pages": [
+		"pages/login/login",
+		"pages/index/index",
+		"pages/common/sample/sample"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+		"backgroundTextStyle": "dark",
+		"enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

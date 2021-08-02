@@ -1,0 +1,46 @@
+/**index.wxss**/
+page {
+  background-color: #F2F2F2FF;
+}
+
+.topHeight{
+  background:white;
+}
+
+.page-container{
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.tab-container{
+  height: 104rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  border-top: 2rpx solid #E5E5E5;
+
+  box-sizing: border-box;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.active{
+  color: #0B7BFB;
+}
+
+.unactive{
+  color: #616161;
+}
+
+.icon{
+  font-size: 40rpx;
+}
+
+.text{
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 32rpx;
+}

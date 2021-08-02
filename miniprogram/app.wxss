@@ -1,0 +1,63 @@
+/**app.wxss**/
+/* @import './assets/style/color.css';
+@import './assets/style/font.css'; */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+.row{
+  display:flex; 
+  flex-direction:row;
+}
+.row-center{
+  display:flex; 
+  flex-direction:row;
+  align-items: center;
+}
+.row-right{
+  display:flex; 
+  flex-direction:row;
+  align-items: flex-end;
+}
+.col{
+  display:flex; 
+  flex-direction:column;
+}
+.col-center{
+  display:flex; 
+  flex-direction:column;
+  align-items: center;
+}
+.center-both{
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+}
+.col-bottom{
+  display:flex; 
+  flex-direction:column;
+  align-items: flex-end;
+}
+
+.center{
+  margin: auto;
+  width: fit-content;
+}
+
+.flex1{
+  flex: 1;
+}
+.flex2{
+  flex: 2;
+}
+.flex3{
+  flex: 3;
+}

@@ -1,0 +1,75 @@
+<!--pages/login/login.wxml-->
+<view class="col-center">
+    <!-- <icon class="iconfont iconLogo logo" /> -->
+    <image src="/assets/images/logo.jpg/" class="logo"></image>
+    <text class="title">工资管理</text>
+    <view class="login-type-container row-center">
+        <view class="col-center" data-index="0" bindtap="onSelectLoginType">
+            <text class="login-type-text" style="color:{{loginModel==0?'#0B7BFB':'#2E2E2EFF'}}">密码登录</text>
+            <view class="underline" style="visibility:{{loginModel==0?'visible':'hidden'}}" />
+        </view>
+        <view class="col-center margin-left-80" data-index="1" bindtap="onSelectLoginType">
+            <text class="login-type-text" style="color:{{loginModel==1?'#0B7BFB':'#2E2E2EFF'}}">验证码登录</text>
+            <view class="underline" style="visibility:{{loginModel==1?'visible':'hidden'}}" />
+        </view>
+    </view>
+</view>
+
+<view class="input-container">
+
+    <!-- 下拉的历史用户 -->
+    <view class='user-list-container' wx:if="{{isShowUsers}}"
+        style='height:{{historyUsers.length>5?400:historyUsers.length*80}}rpx;'>
+
+        <view class='list-item row-center' style='{{index==historyUsers.length-1&&"border:0;"}}'
+            wx:for='{{historyUsers}}' wx:key='this'>
+            <view style="flex:1" data-index='{{index}}' catchtap='selectUser'>
+                {{item.username}}
+            </view>
+            <van-icon data-index='{{index}}' name="close" size="32rpx" catchtap='deleteUser' />
+        </view>
+    </view>
+
+    <block wx:if="{{loginModel==0}}">
+        <view class="input-button-container row-center">
+            <input class="input flex1" model:value="{{ username }}" type="text" placeholder="请输入用户名" bindinput="inputChange" />
+            <view catchtap='showHistoryUsers'>
+                <van-icon name="{{isShowUsers?'arrow-up':'arrow-down'}}" size="40rpx" color="#949494FF" />
+            </view>
+        </view>
+        <view class="input-button-container margin-top-24 row-center">
+            <input class="input flex1" model:value="{{ password }}" password="{{!isDisplayPassword}}"
+                placeholder="请输入密码" bindinput="inputChange" />
+            <view catchtap="displayPassword">
+                <van-icon name="{{isDisplayPassword?'eye-o':'closed-eye'}}" size="40rpx" color="#949494FF"/>
+            </view>
+        </view>
+    </block>
+
+    <block wx:else>
+        <view class="input-button-container">
+            <input class="input" model:value="{{ phoneNumber }}" placeholder="请输入手机号"  type="number" maxlength="11" bindinput="inputChange" />
+        </view>
+        <view class="input-button-container margin-top-24 row-center">
+            <input class="input flex1" model:value="{{ messageCode }}" type="number" maxlength="6"  placeholder="请输入验证码" bindinput="inputChange" />
+            <view class="code-button" bindtap="sendMessage">{{waitingCode?waiteTime:'发送验证码'}}{{waitingCode?'s':''}}
+            </view>
+        </view>
+    </block>
+</view>
+
+<button class="login-button" disabled="{{!loginable}}"
+    style="background:{{loginable?'#0B7BFB':'#D8D8D8'}};color:white"
+    bindtap="{{loginModel==0?'loginByAccount':'loginByMobie'}}">登录</button>
+
+<view class="row option-container">
+    <text wx:if="{{false}}" bindtap="register">去注册</text>
+    <view class="flex1"></view>
+    <text bindtap="forgetPassword">忘记密码</text>
+</view>
+
+<view wx:if="{{false}}" class="wechat-hint">微信快捷登录</view>
+
+<view wx:if="{{false}}" class="wechat-container center-both center" bindtap="wechatLogin">
+    <icon class="iconfont iconweixin1 wechat" />
+</view>

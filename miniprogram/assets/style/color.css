@@ -1,0 +1,45 @@
+.green {
+	color: #1FD55C;
+}
+
+.blue {
+	color: #0B7BFB;
+}
+
+.red {
+	color: #FE4C4C;
+}
+
+.orange {
+	color: #FF9000;
+}
+
+.title-color {
+	color: #2E2E2E;
+	opacity: 0.82;
+}
+
+.primary-color {
+	color: #616161;
+	opacity: 0.62;
+}
+
+.secondary-color {
+	color: #949494;
+	opacity: 0.42;
+}
+
+.icons-color {
+	color: #C4C4C4;
+	opacity: 0.22;
+}
+
+.dividers-color {
+	color: #E5E5E5;
+	opacity: 0.1;
+}
+
+.background-color {
+	color: #F2F2F2;
+	opacity: 0.05;
+}

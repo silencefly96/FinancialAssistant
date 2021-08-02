@@ -1,0 +1,61 @@
+
+/* 数字标题 */
+.numb-title {
+	font-size: 48rpx;
+	line-height: 60rpx;
+}
+
+/* 大标题 */
+.super-title {
+	font-size: 44rpx;
+	line-height: 56rpx;
+}
+
+/* 大标题 */
+.big-title {
+	font-size: 40rpx;
+	line-height: 52rpx;
+}
+
+/* 导航标题 */
+.nav-title {
+	font-size: 36rpx;
+	line-height: 48rpx;
+}
+
+/* 标题 */
+.nav-title {
+	font-size: 34rpx;
+	line-height: 44rpx;
+}
+
+/* 小标题 */
+.sub-title {
+	font-size: 36rpx;
+	line-height: 48rpx;
+}
+
+/* 默认文字 */
+.default-text {
+	font-size: 28rpx;
+	line-height: 38rpx;
+}
+
+/* 默认文字(小) */
+.default-text-small {
+	font-size: 26rpx;
+	line-height: 36rpx;
+}
+
+/* 辅助文字 */
+.assist-text {
+	font-size: 24rpx;
+	line-height: 32rpx;
+}
+
+
+/* 标签文字 */
+.label-text {
+	font-size: 22rpx;
+	line-height: 36rpx;
+}
